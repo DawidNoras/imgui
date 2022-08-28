@@ -3,9 +3,9 @@ project "ImGui"
 	language "C++"
 	cppdialect "C++17"
 	staticruntime "on"
+	_3rd_party_location_dir()
 
-	targetdir ("bin/" .. outputdir .. "/%{prj.name}")
-	objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
+	set_output_dir()
 
 	defines { "IMGUI_API=__declspec(dllexport)" }
 
